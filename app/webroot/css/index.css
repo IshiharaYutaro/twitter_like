@@ -1,0 +1,22 @@
+#error_msg{
+  float: right;
+  color:red;
+  font-weight:bold;
+}
+#output {
+    width: 800px;
+    margin: 0 auto;
+}
+.box {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    padding: 10px;
+    border: 3px dashed #CCCCCC;
+    float: left;
+}
+.loading {
+    padding-top: 0px;
+    clear: both;
+    text-align: center;
+}
