@@ -3,7 +3,7 @@ echo $this->Html->css('index');
 echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js');
 echo $this->Html->script('jquery.bottom-1.0'); 
 echo $this->Html->script('jquery.validate');
-echo $this->Html->script('test');
+echo $this->Html->script('tweet_scroll');
  ?>
 
 <?php if($user['username']==$data_name): ?>

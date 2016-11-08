@@ -3,6 +3,7 @@ App::uses('AppController', 'Controller');
 $uses = array('User','Tweet','Follow');
 
 class UsersController extends AppController {
+  public $helpers = array('Html', 'Form');
   var $json_user_data=null;  
   //読み込むコンポーネントの指定
   public $components = array('Session', 'Auth','Paginator');
@@ -122,7 +123,7 @@ if($id==$json_user_data){
   $this->set('user_id',$user_id);
   $this->set('json_data',$json_data);
   $this->set('json_user_data',$json_user_data);
-  $this->set('_serialize',['page','user_id','my_id','json_user_data','user_first_tweet','user_sentdata','error_msg','json_data','error_msg']);
+  $this->set('_serialize',array('page','user_id','my_id','json_user_data','user_first_tweet','user_sentdata','error_msg','json_data','error_msg'));
 }
 
 else {

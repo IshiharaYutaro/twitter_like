@@ -1,40 +1,40 @@
 <?php
 App::uses('AppModel', 'Model');
+App::uses('Tweet','Model');
+App::uses('User','Model');
+App::uses('Follow','Model');
+class FollowTest extends CakeTestCase {
+          $this->Tweet = ClassRegistry::init('Tweet');
+public $fixtures = array('app.user','app.tweet','app.follow');
+public function setUp() {
+        //親のsetUpは必ず呼び出す
+      //$this->user = new User();
+        parent::setUp();
+        $this->Follow = ClassRegistry::init('Follow');
+    }
 
-class Follow extends AppModel {
-	 public $name = 'Follow';
-
-//ログインしているユーザーのフォローを検索
-  public function list_all_follow($id){
-  $all_follower_data=$this->find('list',array('fields' => array('Follow.follower'),'conditions'=>array('Follow.follow'=>$id)));
-  return $all_follower_data;
-  }
-  public function list_all_follower($id){
-   $all_follow_data=$this->find('list',array('fields' => array('Follow.follow'),'conditions'=>array('Follow.follower' => $id)));
-   return $all_follow_data;
+public function tearDown(){
+  unset($this->Follow);
+    parent::tearDown();
 }
-  
-public function all_follow($id){
-    $follow_data= $this->find('all',array('conditions'=>array('Follow.follow'=>$id)));
-    return $follow_data;
-  }
-
-
-  public function all_follower($id){
-    $follower_data= $this->find('all',array('conditions'=>array('Follow.follower'=>$id)));
-    return $follower_data;
-  }
-
-  public function count_follow($data_name){
-  $count_follow=$this->find('count',array('conditions'=>array('Follow.follow' => $data_name)));
-  return $count_follow;
+ public function testlist_all_follow(){
+$list_all_follow=$this->Follow->list_all_follow('aaaaaaa');
+ }
+ public function testlist_all_follower(){
+$list_all_follower=$this->Follow->list_all_follower('aaaaaaa');
+ }
+ public function testall_follow(){
+  $all_follow=$this->Follow->all_follow('aaaaaaa');
+ }
+ public function testall_follower(){
+  $all_follower=$this->Follow->all_follower('aaaaaaa');
+ }
+ public function testcount_follow(){
+  $count_follow=$this->Follow->count_follow('aaaaaaa');
+ }
+ public function testcount_follower(){
+  $count_follower=$this->Follow->count_follower('aaaaaaa');
+ }
 }
-
-public function count_follower($data_name){
-  $count_follower=$this->find('count',array('conditions'=>array('Follow.follower' => $data_name)));
-  return $count_follower;
-}
-
-
-}
+?>
 

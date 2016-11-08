@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <?php echo $this->html->meta('icon'); ?>
     <?php echo $this->Html->charset(); ?>
     <title><?php echo $title_for_layout; ?> / twitter like</title>
     <?php echo $this->Html->css('main'); ?>

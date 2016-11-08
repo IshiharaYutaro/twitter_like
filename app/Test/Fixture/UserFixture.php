@@ -3,7 +3,7 @@
 class UserFixture extends CakeTestFixture {
   public $useDbConfig = 'test';
   public $fields = array(
-           'id' => array('type' => 'integer', 'key' => 'primary'),
+          'id' => array('type' => 'integer', 'key' => 'primary'),
           'username' => array('type' => 'string','length' => 22,'null' => false),
           'name' => array('type' => 'string','length' => 20,'null' => false),
           'time' => 'datetime',

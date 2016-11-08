@@ -45,7 +45,7 @@ endif;
             echo $this->Form->hidden('follower_id',array('value'=>$data['User']['id']));
             echo $this->Form->hidden('follower',array('value'=>$data['User']['username']));
             echo $this->Form->hidden('id',array('value'=>$data_follow['Follow']['id']));
-            echo $this->Form->submit('unfollow', ['name' => 'unfollow']);
+            echo $this->Form->submit('unfollow', array('name' => 'unfollow'));
             echo $this->Form->end();
         } else {
            /* echo $this->Form->create('Follow');
@@ -102,7 +102,7 @@ echo('<br>');
             echo $this->Form->hidden('follow',array('value'=>$user['username']));
             echo $this->Form->hidden('follower_id',array('value'=>$data_follower['Follow']['id']));
             echo $this->Form->hidden('follower',array('value'=>$data_follower['Follow']['follow']));
-            echo $this->Form->submit('follow', ['name' => 'follow']);
+            echo $this->Form->submit('follow', array('name' => 'follow'));
             echo $this->Form->end();
     	    }
 	 echo("<br>");
