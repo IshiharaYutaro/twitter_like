@@ -1,4 +1,5 @@
-#twitterもどきを作成
+
+# twitterもどきを作成
 
 
 # CakePHP
